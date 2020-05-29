@@ -12,16 +12,12 @@ const sketch = (p) => {
     width = p.windowWidth
     p.createCanvas(width, height)
     p.pixelDensity(1)
-    p.background(tokens.color1)
+    p.background(tokens.color7)
     p.noStroke()
   }
 
   p.draw = () => {
     p.loadPixels()
-    // p.background(tokens.color1)
-    // p.stroke(50)
-    // p.noFill()
-    // p.beginShape()
     for(var x=0; x < width; x++) {
       for(var y=0; y < height; y++) {
         const index = (x+y*width) * 4
@@ -29,7 +25,6 @@ const sketch = (p) => {
         p.pixels[index+0] = r
       }
     }
-    // p.endShape();
     p.updatePixels();
   }
 
