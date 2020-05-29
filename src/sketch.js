@@ -12,7 +12,7 @@ const sketch = (p) => {
     width = p.windowWidth
     p.createCanvas(width, height)
     p.pixelDensity(1)
-    p.background(tokens.color3)
+    p.background(tokens.color1)
     p.noStroke()
   }
 
