@@ -1,0 +1,23 @@
+:root {
+  --color-1: '#0466c8';
+  --color-2: '#0353a4';
+  --color-3: '#023e7d';
+  --color-4: '#002855';
+  --color-5: '#001845';
+  --color-6: '#001233';
+  --color-7: '#33415c';
+  --color-8: '#5c677d';
+  --color-9: '#7d8597';
+  --color-10: '#979dac';
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-1);
+}
+
+#sketch {
+ width: 100vh;
+ height: 100vh;
+}
