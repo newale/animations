@@ -12,7 +12,7 @@ const production = !process.env.ROLLUP_WATCH;
 module.exports = {
   input: 'src/index.js',
   output: {
-    file: 'index.js',
+    file: 'build/index.js',
     format: 'iife',
     sourcemap: true,
   },
@@ -21,7 +21,7 @@ module.exports = {
     sourcemaps(),
     htmlTemplate({
       template: 'src/template.html',
-      target: 'index.html',
+      target: 'build/index.html',
     }),
     // tells Rollup how to find p5 in node_modules
     resolve(),
