@@ -49856,41 +49856,48 @@
 
 	}
 
-	var camera, scene, renderer;
-	var geometry, material, mesh;
+	let mesh, camera, scene, renderer;
 
-	init();
-	animate();
+	const init = () => {
+	  renderer = new WebGLRenderer({antialias: true});
+	  renderer.setClearColor(0x00ff00);
+	  renderer.setPixelRatio(window.devicePixelRatio);
+	  renderer.setSize(window.innerWidth, window.innerHeight);
 
-	function init() {
+	  camera = new PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 3000);
 
-		camera = new PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
-		camera.position.z = 1;
+	  scene = new Scene();
 
-		scene = new Scene();
+	  const light = new AmbientLight(0xFFFFFF, 0.5);
+	  scene.add(light);
 
-		geometry = new BoxGeometry( 0.2, 0.2, 0.2 );
-		material = new MeshNormalMaterial();
+	  const light1 = new PointLight(0xFFFFFF, 0.5);
+	  scene.add(light1);
 
-		mesh = new Mesh( geometry, material );
-		scene.add( mesh );
+	  const geometry = new BoxGeometry(100, 100, 100);
+	  const material = new MeshLambertMaterial({color:  0xf3f2f7});
+	  mesh = new Mesh(geometry, material);
+	  mesh.position.set(0, 0, -1000);
 
-		renderer = new WebGLRenderer( { antialias: true } );
-		renderer.setSize( window.innerWidth, window.innerHeight );
-		document.body.appendChild( renderer.domElement );
+	  scene.add(mesh);
+	 
+	  document.body.appendChild( renderer.domElement );
+	};
 
-	}
+	const render = () => {
+	  mesh.rotation.x += 0.01;
+	  mesh.rotation.y += 0.01;
+	  renderer.render(scene, camera);
+	  requestAnimationFrame(render);
+	};
 
-	function animate() {
+	var Animation = {
+	  init,
+	  render,
+	};
 
-		requestAnimationFrame( animate );
-
-		mesh.rotation.x += 0.01;
-		mesh.rotation.y += 0.02;
-
-		renderer.render( scene, camera );
-
-	}
+	Animation.init();
+	Animation.render();
 
 }());
 //# sourceMappingURL=index.js.map

@@ -7,7 +7,7 @@
     "deploy": "gh-pages-deploy",
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
-    "dev": "npm-run-all --parallel start build:watch",
+    "dev": "run-p start build:watch",
     "start": "serve ."
   },
   "keywords": [],
