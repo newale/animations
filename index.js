@@ -56,7 +56,7 @@
 	    p.loadPixels();
 	    for(var x=0; x < width; x++) {
 	      for(var y=0; y < height; y++) {
-	        const index = (x + y * width) * 4;
+	        const index = (x+y*width) * 4;
 	        const r = p.random(255);
 	        p.pixels[index+0] = r;
 	      }
@@ -70,8 +70,6 @@
 	  //  p.draw()
 	  //}
 	};
-
-	// import './reset.css'
 
 	new P5(sketch, document.getElementById('sketch'));
 
