@@ -1,5 +1,4 @@
-import P5 from 'p5/lib/p5.min'
-import sketch from './sketch'
-import './index.css'
+import Animation from './example1'
 
-new P5(sketch, document.getElementById('sketch'))
+Animation.init()
+Animation.render()

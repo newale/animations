@@ -28,11 +28,11 @@ const sketch = (p) => {
     p.updatePixels();
   }
 
-  //p.windowResized = () => {
-  //  p.clear()
-  //  p.resizeCanvas(p.windowwidth, p.windowheight)
-  //  p.draw()
-  //}
+  p.windowResized = () => {
+    p.clear()
+    p.resizeCanvas(p.windowwidth, p.windowheight)
+    p.draw()
+  }
 }
 
 export default sketch
