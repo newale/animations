@@ -30,7 +30,7 @@ module.exports = {
     css({
       raw: false
     }),
-    production && terser(), // minify, but only in production
-    production && analyze() // analyze, but only in production
+    // production && terser(), // minify, but only in production
+    // production && analyze() // analyze, but only in production
   ]
 };
