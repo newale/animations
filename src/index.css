@@ -1,21 +1,13 @@
-:root {
-  --color-1: '#0466c8';
-  --color-2: '#0353a4';
-  --color-3: '#023e7d';
-  --color-4: '#002855';
-  --color-5: '#001845';
-  --color-6: '#001233';
-  --color-7: '#33415c';
-  --color-8: '#5c677d';
-  --color-9: '#7d8597';
-  --color-10: '#979dac';
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-1);
-  overflow: hidden;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
