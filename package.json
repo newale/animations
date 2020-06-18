@@ -2,7 +2,7 @@
   "name": "animations",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://newale.github.io/animation",
+  "homepage": "https://newale.github.io/animations",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
